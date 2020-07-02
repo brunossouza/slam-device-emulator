@@ -45,6 +45,8 @@ func (r *Device) Marshal() ([]byte, error) {
 
 func getDeviceConfig() (device Device) {
 
+	fmt.Println(equipamento)
+
 	for {
 		response, err := http.Post("http://"+host+"/api/v1/devices/registry", "application/json", bytes.NewBufferString(equipamento))
 		if err != nil {
