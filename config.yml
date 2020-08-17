@@ -1,0 +1,4 @@
+server:
+    host: "localhost"
+    devices:
+        equipments: ["Televisão","Geladeira","Computador","Microoondas"]
