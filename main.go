@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"slam-device-emulator/models"
+	"time"
 
 	"slam-device-emulator/datastore"
 )
@@ -44,5 +45,8 @@ func main() {
 
 	cfg := datastore.ReadConfigFile()
 
-	fmt.Printf("%v", cfg)
+	fmt.Printf("%v\n", cfg)
+
+	datastore.SaveTokensFile(time.Now().String())
+	datastore.ReadTokens()
 }
