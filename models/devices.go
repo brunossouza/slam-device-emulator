@@ -23,7 +23,7 @@ func UnmarshalDevice(data []byte) (Device, error) {
 	return r, err
 }
 
-// Marshal object to json
-func (r *Device) Marshal() ([]byte, error) {
+// DeviceMarshal object to json
+func (r *Device) DeviceMarshal() ([]byte, error) {
 	return json.Marshal(r)
 }

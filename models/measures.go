@@ -2,8 +2,8 @@ package models
 
 import "encoding/json"
 
-// Mensure struct type
-type Mensure struct {
+// Measure struct type
+type Measure struct {
 	Voltage float64 `json:"voltage"`
 	Current float64 `json:"current"`
 	Power   float64 `json:"power"`
@@ -11,14 +11,14 @@ type Mensure struct {
 	Angle   float64 `json:"angle"`
 }
 
-// UnmarshalMensure json to object
-func UnmarshalMensure(data []byte) (Mensure, error) {
-	var r Mensure
+// UnmarshalMeasure json to object
+func UnmarshalMeasure(data []byte) (Measure, error) {
+	var r Measure
 	err := json.Unmarshal(data, &r)
 	return r, err
 }
 
-// Marshal object to json
-func (r *Mensure) Marshal() ([]byte, error) {
+// MeasureMarshal object to json
+func MeasureMarshal(r *Measure) ([]byte, error) {
 	return json.Marshal(r)
 }

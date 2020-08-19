@@ -1,4 +1,5 @@
 server:
     host: "localhost:8080"
 
-equipments: ["Televisão", "Geladeira", "Computador", "Microoondas"]
+equipments:
+    ["Televisão", "Geladeira", "Computador", "Microoondas", "Video Game"]
