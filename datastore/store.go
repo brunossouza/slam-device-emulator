@@ -17,7 +17,7 @@ type Config struct {
 
 // ReadConfigFile read configuration file
 func ReadConfigFile() (cfg *Config) {
-	f, err := os.Open("/home/desenv0/Projetos/go/src/slam-device-emulator/config.yml")
+	f, err := os.Open("config.yml")
 	utils.CheckError(err)
 	defer f.Close()
 
