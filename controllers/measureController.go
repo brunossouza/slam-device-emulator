@@ -35,7 +35,7 @@ func RegistryMeasure(token string, host string) {
 
 	for { //https://slam-gui.herokuapp.com/
 
-		response, err := http.Post("http://"+host+"/api/v1/"+token+"/measures", "application/json", bytes.NewBuffer(dataToSend))
+		response, err := http.Post("http://"+host+"/api/v1/measures"+token, "application/json", bytes.NewBuffer(dataToSend))
 		// response, err := http.Post("https://slam-gui.herokuapp.com/api/v1/devices/registry", "application/json", bytes.NewBufferString(equipamento))
 		utils.CheckError(err)
 

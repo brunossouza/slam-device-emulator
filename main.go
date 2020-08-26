@@ -11,8 +11,8 @@ func main() {
 
 	cfg := datastore.ReadConfigFile()
 
-	for idx, equipamento := range cfg.Equipments {
-		device := controllers.GetDeviceConfig(equipamento, cfg.Server.Host)
+	for idx, equipment := range cfg.Equipments {
+		device := controllers.GetDeviceConfig(equipment, cfg.Server.Host)
 		fmt.Println("Device:\t", idx, "\n", device)
 		datastore.SaveTokensFile(device.Token)
 	}
